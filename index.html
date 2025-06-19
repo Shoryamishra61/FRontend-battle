@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en" class="dark-mode">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuantumCore AI - Engineering Reality's Next Architecture</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <div id="loader">
+        <div class="loader-logo">
+            <svg width="100" height="100" viewBox="0 0 100 100">
+                <path class="loader-logo-path" d="M50 2.5 A 47.5 47.5 0 1 1 2.5 50" fill="none" stroke="#fff" stroke-width="5"/>
+            </svg>
+        </div>
+        <div class="loader-progress">0%</div>
+    </div>
+
+    <div id="main-content">
+        <header id="header">
+            <nav id="navbar">
+                <a href="#hero" class="nav-logo" aria-label="QuantumCore AI Home">
+                    <svg class="logo-svg" width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>QuantumCore AI</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#hero" class="nav-link active">Home</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#globe-section" class="nav-link">Global Reach</a></li>
+                    <li><a href="#case-studies" class="nav-link">Case Studies</a></li>
+                    <li><a href="#impact" class="nav-link">Impact</a></li>
+                </ul>
+                <div class="header-actions">
+                    <button id="theme-toggle" class="theme-btn" aria-label="Toggle light and dark mode">
+                        <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.106a.75.75 0 010 1.06l-1.591 1.59a.75.75 0 11-1.06-1.06l1.59-1.59a.75.75 0 011.06 0zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5H21a.75.75 0 01.75.75zM17.894 17.894a.75.75 0 011.06 0l1.59 1.59a.75.75 0 01-1.06 1.06l-1.59-1.59a.75.75 0 010-1.06zM12 18a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0v-2.25A.75.75 0 0112 18zM5.106 17.894a.75.75 0 010-1.06l1.59-1.59a.75.75 0 111.06 1.06l-1.59 1.59a.75.75 0 01-1.06 0zM3 12a.75.75 0 01.75-.75h2.25a.75.75 0 010 1.5H3.75A.75.75 0 013 12zM6.106 5.106a.75.75 0 011.06 0l1.59 1.59a.75.75 0 01-1.06 1.06L6.106 6.167a.75.75 0 010-1.06z"/></svg>
+                        <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path fill-rule="evenodd" d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69a.75.75 0 01.981.981A10.503 10.503 0 0118 19.5a10.5 10.5 0 01-10.5-10.5c0-4.368 2.667-8.112 6.46-9.672a.75.75 0 01.568.19z" clip-rule="evenodd"/></svg>
+                    </button>
+                    <button class="cta-button-header ripple-effect">Get Started</button>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <section id="hero">
+                <div id="hero-webgl-canvas" aria-hidden="true"></div>
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        <span class="line"><span class="word-reveal">Architects of</span></span>
+                        <span class="line"><span class="word-reveal-highlight">Tomorrow's AI</span></span>
+                    </h1>
+                    <p class="hero-subtitle" data-reveal="fade">We translate quantum principles and generative AI into tangible, industry-defining solutions.</p>
+                    <button class="cta-button-hero ripple-effect" data-reveal="fade">Request a Demo</button>
+                </div>
+            </section>
+
+            <section id="partners" aria-labelledby="partners-title">
+                <h2 id="partners-title" class="visually-hidden">Trusted by Industry Leaders</h2>
+                <div class="marquee">
+                    <div class="marquee-content">
+                        <span>Google</span> <span>NVIDIA</span> <span>Microsoft</span> <span>Salesforce</span> <span>Oracle</span> <span>Adobe</span> <span>Intel</span> <span>AWS</span>
+                    </div>
+                    <div class="marquee-content" aria-hidden="true">
+                        <span>Google</span> <span>NVIDIA</span> <span>Microsoft</span> <span>Salesforce</span> <span>Oracle</span> <span>Adobe</span> <span>Intel</span> <span>AWS</span>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="services" class="section" aria-labelledby="services-title">
+                <h2 id="services-title" class="section-title" data-reveal="fade">Our Solutions Spectrum</h2>
+                <div class="services-grid">
+                    <div class="service-card" data-reveal="up">
+                        <div class="card-icon">
+                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 3v1.5M4.5 8.25H3m18 0h-1.5M4.5 12H3m18 0h-1.5m-15 3.75H3m18 0h-1.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        </div>
+                        <h3 class="card-title">Quantum ML</h3>
+                        <p class="card-description">Leveraging quantum-inspired algorithms to solve complex optimization problems previously thought unsolvable.</p>
+                        <a href="#" class="card-link ripple-effect">Learn More</a>
+                    </div>
+                    <div class="service-card" data-reveal="up">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" /></svg>
+                        </div>
+                        <h3 class="card-title">Generative AI</h3>
+                        <p class="card-description">Custom-trained large language models and diffusion networks for hyper-realistic content and data synthesis.</p>
+                        <a href="#" class="card-link ripple-effect">Learn More</a>
+                    </div>
+                    <div class="service-card" data-reveal="up">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 7.5l3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0021 18V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v12a2.25 2.25 0 002.25 2.25z" /></svg>
+                        </div>
+                        <h3 class="card-title">Neuro-Interfaces</h3>
+                        <p class="card-description">Developing next-generation BCI (Brain-Computer Interface) protocols for seamless human-machine interaction.</p>
+                        <a href="#" class="card-link ripple-effect">Learn More</a>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="globe-section" class="section" aria-labelledby="globe-title">
+                <div class="globe-content">
+                    <h2 id="globe-title" class="section-title" data-reveal="fade">Global Data Network</h2>
+                    <p class="section-subtitle" data-reveal="fade">Our decentralized infrastructure spans the globe, ensuring real-time data processing with unparalleled speed and security.</p>
+                </div>
+                <div id="globe-container" aria-label="Interactive 3D globe showing data centers across the world."></div>
+            </section>
+
+            <section id="case-studies" class="section" aria-labelledby="case-studies-title">
+                <h2 id="case-studies-title" class="section-title" data-reveal="fade">Proven Success</h2>
+                <div class="swiper case-study-swiper" data-reveal="group">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide case-study-slide">
+                            <div class="case-study-image" style="background-image: url('https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?q=80&w=2895&auto=format&fit=crop');"></div>
+                            <div class="case-study-content">
+                                <span class="case-study-tag">Financial Markets</span>
+                                <h3 class="case-study-title">Algorithmic Trading Engine</h3>
+                                <p>Increased trading efficiency by 300% for a leading hedge fund using our quantum-optimization platform.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide case-study-slide">
+                            <div class="case-study-image" style="background-image: url('https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=2940&auto=format&fit=crop');"></div>
+                            <div class="case-study-content">
+                                <span class="case-study-tag">Pharmaceuticals</span>
+                                <h3 class="case-study-title">Drug Discovery AI</h3>
+                                <p>Accelerated protein folding simulation time from months to hours, drastically shortening R&D cycles.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide case-study-slide">
+                            <div class="case-study-image" style="background-image: url('https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?q=80&w=2938&auto=format&fit=crop');"></div>
+                            <div class="case-study-content">
+                                <span class="case-study-tag">Logistics</span>
+                                <h3 class="case-study-title">Supply Chain Optimization</h3>
+                                <p>Redesigned global supply chain routes for a Fortune 500 company, resulting in a 40% reduction in carbon emissions.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next ripple-effect"></div>
+                    <div class="swiper-button-prev ripple-effect"></div>
+                </div>
+            </section>
+            
+            <section id="impact" class="section" aria-labelledby="impact-title">
+                <h2 id="impact-title" class="section-title" data-reveal="fade">Verifiable Impact</h2>
+                <div class="impact-container">
+                    <div class="stats-grid" data-reveal="group">
+                        <div class="stat-item">
+                            <h3 class="stat-number" data-target="4.7" data-decimals="1">0.0</h3>
+                            <p class="stat-label">Exaflops of Compute</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3 class="stat-number" data-target="99.99" data-decimals="2">0.00</h3>
+                            <p class="stat-label">Prediction Accuracy (%)</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3 class="stat-number" data-target="120" data-suffix="M+">0</h3>
+                            <p class="stat-label">Parameters in GenAI Models</p>
+                        </div>
+                    </div>
+                    <div class="graph-container" data-reveal="group">
+                        <canvas id="performance-chart" aria-label="Chart showing computational efficiency growth over 5 years."></canvas>
+                        <div class="chart-filters">
+                            <button class="filter-btn active" data-filter="efficiency">Efficiency</button>
+                            <button class="filter-btn" data-filter="adoption">Adoption</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer id="footer">
+            <div class="footer-grid">
+                <div class="footer-column"><h4>QuantumCore AI</h4><p>Engineering Reality's Next Architecture.</p></div>
+                <div class="footer-column"><h4>Solutions</h4><ul><li><a href="#">Quantum ML</a></li><li><a href="#">Generative AI</a></li><li><a href="#">Neuro-Interfaces</a></li></ul></div>
+                <div class="footer-column"><h4>Company</h4><ul><li><a href="#">About Us</a></li><li><a href="#">Careers</a></li><li><a href="#">Press</a></li></ul></div>
+                <div class="footer-column"><h4>Legal</h4><ul><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Service</a></li></ul></div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 QuantumCore AI. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+    
+    <div id="scroll-popup" class="popup">
+        <button class="popup-close" aria-label="Close popup">&times;</button>
+        <h3>Begin Your Transformation.</h3>
+        <p>Connect with our strategy team to explore how QuantumCore AI can redefine your business.</p>
+        <button class="popup-cta ripple-effect">Schedule Consultation</button>
+    </div>
+</body>
+</html>
